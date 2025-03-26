@@ -1,9 +1,9 @@
 .PHONY: run
 run: main
-	LD_LIBRARY_PATH=. ./$^
+	./$^
 
 main: main.c libone.so libtwo.so libthree.so
-	cc $^ -o $@
+	cc $^ -o $@ -Wl,-rpath .
 
 libone.so: one.cpp
 	c++ -fPIC -shared $^ -o $@
