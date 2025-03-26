@@ -1,4 +1,5 @@
-.PHONY: run
+.PHONY: run, clean
+
 run: main
 	./$^
 
