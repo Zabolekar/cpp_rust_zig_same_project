@@ -11,8 +11,10 @@ pub extern "C" fn call_from_rust() {
     let caller = c"Rust".as_ptr();
     unsafe extern "C" {
         fn call_cpp_from(caller: *const c_char) -> ();
+        fn call_zig_from(caller: *const c_char) -> ();
     }
     unsafe {
         call_cpp_from(caller);
+        call_zig_from(caller);
     }
 }

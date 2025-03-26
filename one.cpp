@@ -3,6 +3,7 @@
 extern "C"
 {
     void call_rust_from(const char*);
+    void call_zig_from(const char*);
 
     void call_cpp_from(const char* caller)
     {
@@ -12,5 +13,6 @@ extern "C"
     void call_from_cpp()
     {
         call_rust_from("C++");
+        call_zig_from("C++");
     }
 }
